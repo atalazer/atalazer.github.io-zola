@@ -1,0 +1,29 @@
+// ====================================
+// Headers
+// ====================================
+.header {
+    .nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        max-width: calc(var(--nav-width) + var(--gap) * 2);
+        margin: auto;
+
+        ul li {
+            display: inline-block;
+            margin-left: 5px;
+        }
+
+        a {
+            padding: 3px 5px;
+            color: var(--fg);
+            display: block;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: var(--bg);
+            background-color: var(--fg);
+        }
+    }
+}

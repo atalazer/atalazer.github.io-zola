@@ -1,0 +1,11 @@
+base_url = "https://atalazer.github.io"
+title = "Atalazer's Blogs"
+compile_sass = true
+build_search_index = true
+
+[markdown]
+highlight_code = true
+
+[extra]
+author = "Atalazer"
+author_url = "https://github.com/atalazer"
