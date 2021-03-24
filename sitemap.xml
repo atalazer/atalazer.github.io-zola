@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>https://atalazer.github.io/</loc>
+    </url>
+    <url>
+        <loc>https://atalazer.github.io/about/</loc>
+        <lastmod>2019-09-25</lastmod>
+    </url>
+    <url>
+        <loc>https://atalazer.github.io/blog/</loc>
+    </url>
+    <url>
+        <loc>https://atalazer.github.io/blog/mengenal-linux/</loc>
+        <lastmod>2021-03-23</lastmod>
+    </url>
+    <url>
+        <loc>https://atalazer.github.io/contact/</loc>
+        <lastmod>2021-03-24</lastmod>
+    </url>
+    <url>
+        <loc>https://atalazer.github.io/docs/</loc>
+    </url>
+</urlset>
