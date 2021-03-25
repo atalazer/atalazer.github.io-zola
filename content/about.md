@@ -6,10 +6,16 @@ date = 2019-09-25
 author = "Atalazer"
 +++
 
-Hello, my name is Ata, I'm a junior developer.
+Hello, my name is Atalariq Barra Hadinugraha, I'm a junior developer.
 
-This site has been made with :
+Follow me at:
+- [Instagram](https://instagram.com)
+- [Facebook](https://facebook.com)
 
-- Zola
-- Sass
-- TOML
+Contact me at: 
+- [Telegram](@atalazer)
+- [E-mail](mailto:baraboyolali@gmail.com)
+
+
+See also my another project in my [GitHub Repository](https://github.com/atalazer).
+
