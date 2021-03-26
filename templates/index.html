@@ -17,22 +17,23 @@
         <link rel="stylesheet" href="{{ get_url(path="main.css") }}"/>
     </head>
     <body>
-        <div class="container">
         {% block body %}
+        <div class="container">
             <div class="header">
             {% include "header.html" %}
             </div>
 
             <div class="content">
             {% block content %}
-                <h1>Welcome to Atalazer's Blogs</h1>
+                <h1 class="post-header">Welcome to Atalazer's Blogs</h1>
             {% endblock content %}
             </div>
 
             <footer class="footer">
             {% include "footer.html" %}
             </footer>
-            {% endblock body %}
         </div>
+        {% endblock body %}
+        <script src="script/main.js"></script>
     </body>
 </html>

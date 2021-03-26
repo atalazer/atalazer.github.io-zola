@@ -18,6 +18,7 @@
         margin: 0;
         padding: 0;
     }
+
     .post-header {
         margin-top: 24px;
         margin-bottom: var(--content-gap);
@@ -60,13 +61,18 @@
             font-size: 12px;
         }
         a {
-            box-shadow: 0 1px 0 var(--primary);
+            color: var(--link);
+            text-decoration: none;
             code {
                 margin-left: 0;
                 margin-right: 0;
                 border-radius: 0;
-                box-shadow: 0 -1px 0 var(--primary) inset;
             }
+        }
+        a:hover {
+            color: var(--link);
+            text-decoration: none;
+            border-bottom: 1px solid var(--link-ul);
         }
         del {
             text-decoration: none;
@@ -77,6 +83,11 @@
         }
         ul, ol {
             padding-left: 20px;
+        }
+        ul {
+            pre {
+                margin-left: calc(var(--gap) * -2);
+            }
         }
         li {
             margin-top: 5px;
@@ -103,8 +114,7 @@
         }
         table {
             margin-bottom: 32px;
-            table th,
-            table:not(.highlighttable) td {
+            table th, table:not(.highlighttable) td {
                 min-width: 80px;
                 padding: 12px 8px;
                 line-height: 1.5;
@@ -119,22 +129,6 @@
             margin-left: 0;
             margin-right: 0;
         }
-        .highlight, pre {
-            margin-left: calc(var(--gap) * -1);
-            margin-right: calc(var(--gap) * -1);
-            margin-bottom: 32px;
-            background: var(--hljs-bg) !important;
-            border-radius: var(--radius);
-        }
-        ul pre {
-            margin-left: calc(var(--gap) * -2);
-        }
-        .highlight pre {
-            margin-left: 0;
-            margin-right: 0;
-            margin-bottom: 0;
-        }
-        /* table */
         .highlighttable {
             table-layout: fixed;
             td:first-child {
@@ -154,6 +148,16 @@
         }
         /* inline */
         .highlight {
+            margin-left: calc(var(--gap) * -1);
+            margin-right: calc(var(--gap) * -1);
+            margin-bottom: 32px;
+            background: var(--hljs-bg) !important;
+            border-radius: var(--radius);
+            pre {
+                margin-left: 0;
+                margin-right: 0;
+                margin-bottom: 0;
+            }
             span {
                 background: transparent !important;
             }
@@ -169,14 +173,21 @@
             background: var(--code-bg);
             border-radius: 2px;
         }
-        pre code {
-            display: block;
-            margin-left: 0;
-            margin-right: 0;
-            padding: var(--gap);
-            color: rgba(255, 255, 255, 0.8);
-            background: transparent;
-            border-radius: 0;
+        pre {
+            margin-left: calc(var(--gap) * -1);
+            margin-right: calc(var(--gap) * -1);
+            margin-bottom: 32px;
+            background: var(--hljs-bg) !important;
+            border-radius: var(--radius);
+            code {
+                display: block;
+                margin-left: 0;
+                margin-right: 0;
+                padding: var(--gap);
+                color: rgba(255, 255, 255, 0.8);
+                background: transparent;
+                border-radius: 0;
+            }
         }
         blockquote {
             margin: 0 0 0 calc(var(--gap) * -1);
