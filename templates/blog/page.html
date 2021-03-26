@@ -17,13 +17,36 @@
             <span class="post-reading-time">{{ page.reading_time }} min read</span>
         </div>
     </header>
+
+    {% if page.toc %}
+    <div class="post-toc">
+        <ul>
+            {% for h1 in page.toc %}
+            <li>
+                <a href="{{h1.permalink | safe}}">{{ h1.title }}</a>
+                {% if h1.children %}
+                <ul>
+                    {% for h2 in h1.children %}
+                    <li>
+                        <a href="{{h2.permalink | safe}}">{{ h2.title }}</a>
+                    </li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    {% endif %}
+
     <div class="post-content">{{ page.content | safe }}</div>
+
     <footer class="post-footer">
         {% if page.taxonomies.tags %}
         <ul class="post-tags">
-        {% for tag in page.taxonomies.tags %}
+            {% for tag in page.taxonomies.tags %}
             <li><a href="{{ get_taxonomy_url(kind="tags", name=tag) | safe }}">{{ tag }}</a></li>
-        {% endfor %}
+            {% endfor %}
         </ul>
         {% endif %}
     </footer>

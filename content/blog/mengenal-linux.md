@@ -1,6 +1,13 @@
 +++
 title = "Mengenal Linux"
+description = "Awal mula saya mengenal Linux"
 date = 2021-03-23
+updated = 2021-03-26
+
+in_search_index = true
+
+[taxonomies]
+# tags = ["linux"]
 
 [extra]
 author = "Atalazer"

@@ -1,0 +1,31 @@
+{% extends "index.html" %}
+
+{% block content %}
+<article class="docs-single">
+    <header class="docs-header">
+        <h1 class="docs-title">{{ page.title }}</h1>
+        <div class="docs-meta">
+            {% if page.extra.author_url %}Author: <a class="docs-author" href="{{ page.extra.author_url | safe }}">
+                {{ page.extra.author }}
+            </a>
+            {% else %}<span class="docs-author">
+                Author: {{ page.extra.author }}
+            </span>{% endif %}
+            <br/>
+            <span class="docs-date">Published: <time>{{ page.date | date(format="%B %e, %Y") }}</time></span>
+            <span>&middot;</span>
+            <span class="docs-reading-time">{{ page.reading_time }} min read</span>
+        </div>
+    </header>
+    <div class="docs-content">{{ page.content | safe }}</div>
+    <footer class="docs-footer">
+        {% if page.taxonomies.tags %}
+        <ul class="docs-tags">
+        {% for tag in page.taxonomies.tags %}
+            <li><a href="{{ get_taxonomy_url(kind="tags", name=tag) | safe }}">{{ tag }}</a></li>
+        {% endfor %}
+        </ul>
+        {% endif %}
+    </footer>
+</article>
+{% endblock content %}

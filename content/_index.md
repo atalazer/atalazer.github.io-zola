@@ -1,4 +1,7 @@
 +++
-title = "Hello World"
-date = 2021-03-24
+title = "Home"
+date = "2021-03-25"
+
+[extra]
+author = "Atalazer"
 +++

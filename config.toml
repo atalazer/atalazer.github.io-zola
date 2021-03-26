@@ -1,7 +1,12 @@
 base_url = "https://atalazer.github.io"
 title = "Atalazer's Blogs"
+
 compile_sass = true
 build_search_index = true
+
+taxonomies = [
+    {name = "tags", rss = true},
+]
 
 [markdown]
 highlight_code = true

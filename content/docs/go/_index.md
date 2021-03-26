@@ -1,6 +1,6 @@
 +++
-title = "Docs"
-description = "List of personal documentation"
+title = "Golang"
+description = "Golang documentation"
 sort_by = "date"
 weight = 0
 
@@ -13,6 +13,6 @@ template = "docs/section.html"
 page_template = "docs/page.html"
 
 subsection = [
-    "go",
+    "basic",
 ]
 +++
