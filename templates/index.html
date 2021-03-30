@@ -5,8 +5,6 @@
 
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta http-equiv="content-type" content="text/html; charset=utf-8">
-            <!-- Enable responsiveness on mobile devices-->
-            <!-- viewport-fit=cover is to support iPhone X rounded corners and notch in landscape-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, viewport-fit=cover">
 
             <!-- Standard meta tags -->
@@ -14,7 +12,7 @@
         {% if page.summary %}<meta name="description" content="{{ page.summary | markdown(inline=true) }}">{% endif %}
 
             <!-- CSS -->
-        <link rel="stylesheet" href="{{ get_url(path="main.css") }}"/>
+        <link rel="stylesheet" href="{{ get_url(path="style.css") }}"/>
     </head>
     <body>
     {% block body %}
@@ -22,15 +20,15 @@
             <header class="header">
                 <nav class="nav">
                 <ul>
-                    <li> <a href="{{ get_url(path="@/_index.md") }}"> Home </a> </li>
-                    <li> <a href="{{ get_url(path="@/about.md") }}"> About </a> </li>
-                    <li> <a href="{{ get_url(path="/blog/") }}"> Blog </a> </li>
-                    <li> <a href="{{ get_url(path="/docs/") }}"> Docs </a> </li>
+                    <li> <a href="{{ get_url(path="@/_index.md", trailing_slash=false) }}"> Home </a> </li>
+                    <li> <a href="{{ get_url(path="@/about.md", trailing_slash=false) }}"> About </a> </li>
+                    <li> <a href="{{ get_url(path="/blog/", trailing_slash=true) }}"> Blog </a> </li>
+                    <li> <a href="{{ get_url(path="/docs/", trailing_slash=true) }}"> Docs </a> </li>
                 </ul>
                 </nav>
             </header>
 
-            <main class="content">
+            <main class="content cf">
             {% block content %}
                 <h1 class="post-header">Welcome to Atalazer's Blogs</h1>
             {% endblock content %}

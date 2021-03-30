@@ -6,9 +6,7 @@ weight = 0
 
 paginate_by = 0
 paginate_path = "page"
-insert_anchor_links = "none"
 render = true
-redirect_to = 
 transparent = false
 
 template = "blog/section.html"

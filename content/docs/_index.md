@@ -14,5 +14,6 @@ page_template = "docs/page.html"
 
 subsection = [
     "go",
+    "html"
 ]
 +++
