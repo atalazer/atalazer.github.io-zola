@@ -19,25 +19,31 @@
         <div class="container">
             <header class="header">
                 <nav class="nav">
-                <ul>
-                    <li> <a href="{{ get_url(path="@/_index.md", trailing_slash=false) }}"> Home </a> </li>
-                    <li> <a href="{{ get_url(path="@/about.md", trailing_slash=false) }}"> About </a> </li>
-                    <li> <a href="{{ get_url(path="/blog/", trailing_slash=true) }}"> Blog </a> </li>
-                    <li> <a href="{{ get_url(path="/docs/", trailing_slash=true) }}"> Docs </a> </li>
-                </ul>
+                {% if page %}
+                    <p class="logo"><a href="{{ get_url(path="", trailing_slash=false ) }}">{{ config.title }}</a></p>
+                {% else %}
+                    <h1 class="logo"><a href="{{ get_url(path="", trailing_slash=false ) }}">{{ config.title }}</a></h1>
+                {% endif %}
+                    <ul class="menu">
+                        <li> <a href="{{ get_url(path="@/_index.md", trailing_slash=false) }}"> Home </a> </li>
+                        <li> <a href="{{ get_url(path="@/about.md", trailing_slash=false) }}"> About </a> </li>
+                        <li> <a href="{{ get_url(path="/blog/", trailing_slash=true) }}"> Blog </a> </li>
+                        <li> <a href="{{ get_url(path="/docs/", trailing_slash=true) }}"> Docs </a> </li>
+                    </ul>
                 </nav>
             </header>
 
             <main class="content cf">
             {% block content %}
                 <h1 class="post-header">Welcome to Atalazer's Blogs</h1>
+                <img src="/img/home-sc.png" alt="Workspace Screenshot" class="post-thumbnail">
             {% endblock content %}
             </main>
 
             <footer class="footer">
-            <span>&copy; {{ now() | date(format="%Y") }} <a href="{{ get_url(path="", trailing_slash=false ) }}">{{ config.title }}</a></span>
-            <span>&middot;</span>
-            <span>Powered by <a href="https://www.getzola.org" rel="noopener" target="_blank">Zola</a>️</span>
+                <span>&copy; {{ now() | date(format="%Y") }} <a href="{{ get_url(path="", trailing_slash=false ) }}">{{ config.title }}</a></span>
+                <span>&middot;</span>
+                <span>Powered by <a href="https://www.getzola.org" rel="noopener" target="_blank">Zola</a>️</span>
             </footer>
         </div>
         {% endblock body %}
