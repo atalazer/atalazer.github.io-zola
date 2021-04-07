@@ -8,7 +8,7 @@ author = "Atalazer"
 +++
 
 # Pembuka
-Pernahkah kalian membuka sebuah website di Internet? Pastinya pernah kan.
+Pernahkah kalian membuka sebuah website di Internet? Pastinya pernahkan.
 Tapi kalian pernah nggak kepikiran bagaimana cara membuat sebuah website?
 Untuk membuat sebuah website, kita harus mempunyai dasar-dasarnya.
 Salah satu dasarnya adalah mengenai HTML

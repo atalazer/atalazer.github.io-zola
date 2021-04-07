@@ -14,7 +14,7 @@ Pada kesempatan kali ini kita akan membuat program pertama kita.
 # Hello World
 1. Buat file dengan ekstensi *.html*
 2. Buka file tersebut kemudian buka file tersebut dengan Text Editor
-3. Masukkan baris code berikut ke Text Editor kalian:
+3. Masukkan baris kode berikut ke Text Editor kalian:
 ```html
 <!DOCTYPE html>
 <html>
