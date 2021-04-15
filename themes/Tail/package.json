@@ -1,0 +1,23 @@
+{
+  "name": "atalazer-zola-theme-tail",
+  "version": "1.0.0",
+  "description": "Atalazer Zola SSG Theme with TailwindCSS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch:css": "postcss styles/styles.css -o static/styles.css -w",
+    "build:css": "postcss styles/styles.css -o static/style.css"
+  },
+  "author": "Atalazer",
+  "license": "MIT",
+  "keywords": [
+    "zola",
+    "tailwindcss"
+  ],
+  "dependencies": {
+    "autoprefixer": "^10.2.5",
+    "postcss": "^8.2.9",
+    "postcss-cli": "^8.3.1",
+    "tailwindcss": "^2.1.1"
+  }
+}

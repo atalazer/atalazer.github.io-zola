@@ -9,7 +9,7 @@ paginate_path = "page"
 render = true
 transparent = false
 
-template = "blog/section.html"
-page_template = "blog/page.html"
+template = "subsection.html"
+page_template = "page.html"
 
 +++

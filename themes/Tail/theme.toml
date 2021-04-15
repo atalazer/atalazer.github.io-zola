@@ -1,0 +1,14 @@
+name = "Atalazer Tail theme"
+description = "Themes with TailwindCSS"
+license = "MIT"
+homepage = "https://github.com/atalazer/atalazer.github.io"
+min_version = "0.13.0"
+demo = ""
+
+[extra]
+
+# The theme author info: you!
+[author]
+name = "Atalazer"
+homepage = "https://atalazer.github.io"
+

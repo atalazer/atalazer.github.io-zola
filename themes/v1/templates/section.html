@@ -1,0 +1,16 @@
+{% extends "index.html" %}
+
+{% block content %}
+<div class="section">
+    <h1>{{ section.title }}</h1>
+    <p>{{ section.content | safe }}</p>
+    <ul class="section-list">
+        {% for subsection in section.subsections | sort %}
+        <li>
+            {% set subsection_item = get_section(path=subsection) %}  
+            <a href="{{ subsection_item.permalink }}"> {{ subsection_item.title }} </a>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock content %}

@@ -1,8 +1,8 @@
 base_url = "https://atalazer.github.io"
 title = "Atalazer's Blogs"
 
-compile_sass = true
-build_search_index = true
+# v1 Tail
+theme = "v1"
 
 taxonomies = [
     {name = "tags", rss = true},
@@ -10,6 +10,9 @@ taxonomies = [
 
 [markdown]
 highlight_code = true
+highlight_theme = "ayu-mirage"
+render_emoji = true
+smart_punctuation = true
 
 [extra]
 author = "Atalazer"

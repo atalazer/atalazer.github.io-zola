@@ -7,8 +7,8 @@ paginate_path = "page"
 render = true
 transparent = false
 
-template = "docs/subsection.html"
-page_template = "docs/page.html"
+template = "subsection.html"
+page_template = "page.html"
 
 [extra]
 author = "Atalazer"

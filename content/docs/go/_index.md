@@ -9,8 +9,7 @@ paginate_path = "page"
 render = true
 transparent = false
 
-template = "docs/section.html"
-page_template = "docs/page.html"
+template = "section.html"
 
 subsection = [
     "basic",

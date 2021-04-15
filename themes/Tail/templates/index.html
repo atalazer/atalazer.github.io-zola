@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>{% if page.title %}{{ page.title }}{% else %}{{ config.title }}{% endif %}</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, viewport-fit=cover">
+
+        <!-- Standard meta tags -->
+    {% if page.extra.author %}<meta name="author" content="{{ page.extra.author }}">{% endif %}
+    {% if page.summary %}<meta name="description" content="{{ page.summary | markdown(inline=true) }}">{% endif %}
+
+    {% block css %}
+    <link rel="stylesheet" href="{{ get_url(path="styles.css", trailing_slash=false) | safe }}">
+    {% endblock css %}
+    
+</head>
+
+<body class="bg-gray-300 font-sans text-base text-black antialiased">
+{% block body %}
+
+    <div class="container md:container relative md:mx-auto px-4 bg-white">
+
+        <header class="bg-black text-white justify-between">
+
+            <nav class="flex flex-wrap mx-auto w-full">
+            {% if page %}
+                <p class="mx-24"><a href="{{ get_url(path="", trailing_slash=false ) }}">{{ config.title }}</a></p>
+                {% else %}
+                <h1 class="mx-24"><a href="{{ get_url(path="", trailing_slash=false ) }}">{{ config.title }}</a></h1>
+                {% endif %}
+                <ul class="flex mx-24 list-none overflow-x-auto">
+                    <li><a href="{{ get_url(path="@/_index.md", trailing_slash=false) }}"> Home </a> </li>
+                    <li><a href="{{ get_url(path="@/about.md", trailing_slash=false) }}"> About </a> </li>
+                    <li><a href="{{ get_url(path="/blog/", trailing_slash=true) }}"> Blog </a> </li>
+                    <li><a href="{{ get_url(path="/docs/", trailing_slash=true) }}"> Docs </a> </li>
+                </ul>
+            </nav>
+
+        </header>
+
+        <main class="">
+            {% block content %}
+
+            <h1 class="text-6xl py-4">Welcome to Atalazer's Blogs</h1>
+            <img src="/img/home-sc.png" alt="Workspace Screenshot" class="object-cover object-top w-full h-auto md:h-96 border-t-8 border-b-8 border-purple-400">
+
+            {% endblock content %}
+        </main>
+
+        <footer class="">
+
+            <span>&copy; {{ now() | date(format="%Y") }} <a href="{{ get_url(path="", trailing_slash=false ) }}">{{ config.title }}</a></span>
+            <span>&middot;</span>
+            <span>Powered by <a href="https://www.getzola.org" rel="noopener" target="_blank">Zola</a>️</span>
+
+        </footer>
+
+    </div>
+    
+    {% endblock body %}
+</body>
+
+</html>
